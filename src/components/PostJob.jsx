@@ -51,7 +51,7 @@ const PostJob = () => {
               <TextField label='Salary' fullWidth />
             </Grid>
             <Grid xs={12} md={6} paddingLeft={5} paddingRight={2} marginTop={2}>
-              <TextField label='People To Hire' fullWidth />
+              <TextField label='Vacancy' fullWidth />
             </Grid>
             <Grid xs={12} md={6} paddingRight={5} paddingLeft={1} marginTop={2}>
               <TextField label='Application Dead Line' fullWidth />
