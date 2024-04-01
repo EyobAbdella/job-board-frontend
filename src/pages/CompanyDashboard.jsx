@@ -11,8 +11,8 @@ const CompanyDashboard = () => {
       <CompanySidebar />
       {/* <CompanyProfile /> */}
       {/* <PostJob /> */}
-      {/* <Applicant /> */}
-      <ManageJobs />
+      <Applicant />
+      {/* <ManageJobs /> */}
     </div>
   );
 };

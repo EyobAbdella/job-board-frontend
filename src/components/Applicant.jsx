@@ -18,7 +18,7 @@ const Applicant = () => {
         <p className='text-xl bg-gray-100 font-semibold border-b border-gray-200 py-6 px-8 w-full'>
           Senior Front-end Developers
         </p>
-        <div className='flex justify-center space-x-6 p-4'>
+        {/* <div className='flex justify-center space-x-6 p-4'>
           <p className='bg-indigo-400 px-20 py-3 rounded-lg text-white text-lg'>
             Total
           </p>
@@ -28,7 +28,7 @@ const Applicant = () => {
           <p className='px-16 py-3 rounded-lg text-red-500 border border-red-200 font-[500]'>
             Rejected
           </p>
-        </div>
+        </div> */}
         <div className='px-4'>
           <div className='flex items-center border border-gray-200 rounded-lg px-3 py-6 gap-x-5'>
             <Avatar src={Profile} sx={{ width: 90, height: 90 }} />
@@ -37,8 +37,8 @@ const Applicant = () => {
               <p>Software Engineer</p>
             </div>
             <div className='ml-auto'>
-              <button className='w-44 text-white bg-teal-600 hover:bg-teal-500 rounded-md py-2.5'>
-                <DownloadIcon sx={{ mr: 1.5 }} /> Download CV
+              <button className='w-44 text-white bg-indigo-500 hover:bg-indigo-400 rounded-md py-2.5'>
+                Show Resume
               </button>
             </div>
           </div>

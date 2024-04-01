@@ -1,24 +1,83 @@
-import React from "react";
+import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
+import EditNoteIcon from "@mui/icons-material/EditNote";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
 const ManageJobs = () => {
   const jobs = [
     {
-      title: "software Engineering",
+      title: "Software Engineering",
       Application: "6 Applied",
       created: "Jan 14, 2024",
       expired: "Feb 14, 2024",
+      status: "Active",
+    },
+    {
+      title: "Data Scientist",
+      Application: "12 Applied",
+      created: "Mar 20, 2024",
+      expired: "Apr 20, 2024",
       status: "Expired",
     },
     {
-      title: "software Engineering",
-      Application: "6 Applied",
-      created: "Jan 14, 2024",
-      expired: "Feb 14, 2024",
+      title: "Project Manager",
+      Application: "4 Applied",
+      created: "Feb 5, 2024",
+      expired: "Mar 5, 2024",
+      status: "Active",
+    },
+    {
+      title: "UI/UX Designer",
+      Application: "8 Applied",
+      created: "Jan 30, 2024",
+      expired: "Feb 28, 2024",
+      status: "Active",
+    },
+    {
+      title: "Backend Developer",
+      Application: "3 Applied",
+      created: "Apr 1, 2024",
+      expired: "May 1, 2024",
+      status: "Active",
+    },
+    {
+      title: "Data Engineer",
+      Application: "7 Applied",
+      created: "Mar 10, 2024",
+      expired: "Apr 10, 2024",
+      status: "Expired",
+    },
+    {
+      title: "DevOps Engineer",
+      Application: "5 Applied",
+      created: "Feb 15, 2024",
+      expired: "Mar 15, 2024",
+      status: "Expired",
+    },
+    {
+      title: "Frontend Developer",
+      Application: "9 Applied",
+      created: "Jan 25, 2024",
+      expired: "Feb 25, 2024",
+      status: "Expired",
+    },
+    {
+      title: "Quality Assurance",
+      Application: "2 Applied",
+      created: "Apr 5, 2024",
+      expired: "May 5, 2024",
+      status: "Active",
+    },
+    {
+      title: "Technical Writer",
+      Application: "1 Applied",
+      created: "Mar 1, 2024",
+      expired: "Apr 1, 2024",
       status: "Expired",
     },
   ];
+
   return (
-    <div className='lg:px-14 md:px-10 mb-auto mt-10 w-full space-y-6'>
+    <div className='lg:px-14 md:px-10 mb-auto mt-10 w-full space-y-6 overflow-scroll'>
       <h1 className='text-3xl font-[500] font-sans'>Manage Jobs</h1>
       <div className='space-x-1.5 font-[500] text-gray-500'>
         <span>Job Board</span>
@@ -27,49 +86,63 @@ const ManageJobs = () => {
         <span>/</span>
         <span className='text-indigo-400 cursor-pointer'>Manage Jobs</span>
       </div>
-      <div className='border border-gray-200 rounded-lg space-y-3 pb-4'>
+      <div className='border border-gray-200 rounded-lg space-y-3'>
         <div className='flex justify-center items-center py-8 bg-gray-100'>
           <p className='text-xl font-[500]'>Showing 1-10 of 07 Job</p>
         </div>
-        {/* <div className='mt-5 border-b-2 border-gray-200 px-4 mx-4 text-slate-500 font-[500] text-[17px] mb-2 flex space-x-8 items-center'>
-          <p className='w-48'>Title</p>
-          <p className='w-40 border border-black'>Applications</p>
-          <p className='w-40 border border-black'>Created</p>
-          <p className='w-40 border border-black'>Expired</p>
-          <p className='w-40 border border-black'>Status</p>
-          <p className='w-40 border border-black'>Action</p>
-        </div>
-        <div className='mt-5 border-b-2 border-gray-200 px-4 mx-4 text-slate-500 font-[500] text-[17px] mb-2 flex space-x-8 items-center'>
-          <p className='w-48'>Software Engineer</p>
-          <p className='w-40 border border-black'>6 Applied</p>
-          <p className='w-40 border border-black'>Jun 16, 2024</p>
-          <p className='w-40 border border-black'>Mar 16, 2024</p>
-          <p className='w-40 border border-black'>Expired</p>
-          <div>
-            <p className='p-4 bg-indigo-400 rounded-lg'></p>
-          </div>
-        </div> */}
-        <div className='mx-4 w-full overflow-x-scroll px-4'>
-          <div className='border-b-2 border-gray-200 flex justify-between w-full'>
-            <p className='w-44'>Title</p>
-            <p className='w-40 text-start'>Application</p>
-            <p>Created</p>
-            <p>Expired</p>
-            <p>Status</p>
-            <p>Action</p>
-          </div>
-          {jobs.map((job) => (
-            <div className='flex justify-between w-full'>
-              <p className='w-44'>{job.title}</p>
-              <p className='w-40 text-start'>{job.Application}</p>
-              <p>{job.created}</p>
-              <p>{job.expired}</p>
-              <p>{job.status}</p>
-              <p>
-                <p className='w-6 h-6 bg-indigo-400 rounded-lg'></p>
-              </p>
-            </div>
-          ))}
+        <div className='overflow-x-auto w-full'>
+          <table className='w-full text-center border-b mx-5  border-gray-200'>
+            <thead className='uppercase border-b border-gray-400 text-slate-700'>
+              <tr>
+                <th scope='col' className='px-6 py-3'>
+                  Title
+                </th>
+                <th scope='col' className='px-6 py-3'>
+                  Application
+                </th>
+                <th scope='col' className='px-6 py-3'>
+                  Created
+                </th>
+                <th scope='col' className='px-6 py-3'>
+                  Expired
+                </th>
+                <th scope='col' className='px-6 py-3'>
+                  Status
+                </th>
+                <th scope='col' className='px-6 py-3'>
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {jobs.map((items, index) => (
+                <tr
+                  key={index}
+                  className='border-b border-gray-400 text-slate-800 mx-10'>
+                  <td className='min-w-40 py-5 text-start'>{items.title}</td>
+                  <td>{items.Application}</td>
+                  <td>{items.created}</td>
+                  <td>{items.expired}</td>
+                  <td>{items.status}</td>
+                  <td className='space-x-4'>
+                    <span className='bg-indigo-100 cursor-pointer  px-2 py-1.5 rounded-md'>
+                      <RemoveRedEyeOutlinedIcon
+                        sx={{ fontSize: 18, color: "#6a52aecb" }}
+                      />
+                    </span>
+                    <span className='bg-indigo-100 cursor-pointer pl-1.5 pr-1 py-1.5 rounded-md'>
+                      <EditNoteIcon sx={{ fontSize: 24, color: "#6a52aecb" }} />
+                    </span>
+                    <span className='bg-indigo-100 cursor-pointer px-2 py-1.5 rounded-md'>
+                      <DeleteOutlineIcon
+                        sx={{ fontSize: 22, color: "#6a52aecb" }}
+                      />
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
