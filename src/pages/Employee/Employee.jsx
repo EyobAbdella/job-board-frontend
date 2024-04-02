@@ -1,6 +1,6 @@
-import FilterEmployee from "../components/FilterEmployee";
-import EmployeeCard from "../components/EmployeeCard";
-import Profile from "../assets/profile.png";
+import FilterEmployee from "../../components/FilterEmployee";
+import EmployeeCard from "../../components/Employee/EmployeeCard";
+import Profile from "../../assets/profile.png";
 
 const Employee = () => {
   return (

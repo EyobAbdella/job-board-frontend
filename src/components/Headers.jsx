@@ -5,6 +5,7 @@ import {
   Button,
   Tab,
   Tabs,
+  TextField,
   Toolbar,
   Typography,
   useMediaQuery,
@@ -57,11 +58,14 @@ const Header = () => {
                   setValue(value);
                   navigate(url[value]);
                 }}>
-                <Tab label='Jobs' />
+                <Tab label='Find Jobs' />
                 <Tab label='Companies' />
-                <Tab label='Employee' />
-                <Tab label='Resume Builder' />
-                <Tab label='Reporter Jobs' />
+                <TextField
+                  label='Size'
+                  id='outlined-size-small'
+                  defaultValue='Small'
+                  size='small'
+                />
               </Tabs>
               <button
                 onClick={() => navigate("signup")}

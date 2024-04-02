@@ -1,8 +1,8 @@
 import { Avatar, Rating } from "@mui/material";
-import CompanyLogo from "../assets/company-logo.png";
+import CompanyLogo from "../../assets/company-logo.png";
 import BusinessCenterOutlinedIcon from "@mui/icons-material/BusinessCenterOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import Profile from "../assets/profile.png";
+import Profile from "../../assets/profile.png";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const CompanyDetail = () => {

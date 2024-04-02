@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import CompanyCard from "../components/CompanyCard";
-import Company from "../assets/company.svg";
 import { Button, TextField, useMediaQuery, useTheme } from "@mui/material";
-import MultipleSelect from "../components/MultipleSelect";
-import CompanyLogo from "../assets/company-logo.png";
+import { useState } from "react";
+import CompanyCard from "../../components/Company/CompanyCard";
+import MultipleSelect from "../../components/MultipleSelect";
+import CompanyLogo from "../../assets/company-logo.png";
+import Company from "../../assets/company.svg";
 
 const Companies = () => {
   const theme = useTheme();

@@ -1,7 +1,7 @@
 import { Box, Grid, TextField } from "@mui/material";
 import "easymde/dist/easymde.min.css";
 import SimpleMDE from "react-simplemde-editor";
-import Choices from "./Choices";
+import Choices from "../Choices";
 
 const CompanyProfile = () => {
   const industry = [

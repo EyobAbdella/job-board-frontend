@@ -1,20 +1,8 @@
-import { IoIosSearch } from "react-icons/io";
+import ArchitectureOutlinedIcon from "@mui/icons-material/ArchitectureOutlined";
+import { Button, TextField, useMediaQuery, useTheme } from "@mui/material";
 import Job from "../assets/job.svg";
 import Category from "../components/Category";
-import Design from "../assets/design.svg";
-import {
-  Box,
-  Button,
-  Grid,
-  Stack,
-  TextField,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
-import ArchitectureOutlinedIcon from "@mui/icons-material/ArchitectureOutlined";
 import MultipleSelect from "../components/MultipleSelect";
-import { styled } from "@mui/system";
-import CompanyCard from "../components/CompanyCard";
 
 import ApplySteps from "../components/ApplySteps";
 import Testimonial from "../components/Testimonial";

@@ -1,4 +1,4 @@
-import EmployeeSidebar from "../components/EmployeeSidebar";
+import EmployeeSidebar from "../../components/Employee/EmployeeSidebar";
 
 const EmployeeDashboard = () => {
   return (

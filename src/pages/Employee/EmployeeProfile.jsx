@@ -1,11 +1,9 @@
-import React from "react";
-import { Avatar, Rating } from "@mui/material";
-import Profile from "../assets/profile.png";
-import DownloadIcon from "@mui/icons-material/Download";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import BusinessCenterOutlinedIcon from "@mui/icons-material/BusinessCenterOutlined";
+import DownloadIcon from "@mui/icons-material/Download";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
+import { Avatar, Rating } from "@mui/material";
+import Profile from "../../assets/profile.png";
 
 const EmployeeProfile = () => {
   return (
@@ -90,7 +88,7 @@ const EmployeeProfile = () => {
           <div className='border border-gray-300 rounded-md px-8 py-4 w-full space-y-4'>
             <h1 className='text-2xl font-semibold my-2'>About: </h1>
             <p className='text-indigo-950'>
-              We're seeking out a person with the innovative spark, eye for
+              We`re seeking out a person with the innovative spark, eye for
               example and layout, ardour for images and cappotential to supply
               excessive first-rate layout collaterals end-to-end. Draft mockups
               of internet site designs, brochures, iconography, and every other
@@ -103,7 +101,7 @@ const EmployeeProfile = () => {
           <div className='border border-gray-300 rounded-md px-8 py-4 w-full space-y-4'>
             <h1 className='text-2xl font-semibold my-2'>Education: </h1>
             <p className='text-indigo-950'>
-              We're seeking out a person with the innovative spark, eye for
+              We`re seeking out a person with the innovative spark, eye for
               example and layout, ardour for images and cappotential to supply
               excessive first-rate layout collaterals end-to-end. Draft mockups
               of internet site designs, brochures, iconography, and every other
@@ -116,7 +114,7 @@ const EmployeeProfile = () => {
           <div className='border border-gray-300 rounded-md px-8 py-4 w-full space-y-4'>
             <h1 className='text-2xl font-semibold my-2'>Work & Experience: </h1>
             <p className='text-indigo-950'>
-              We're seeking out a person with the innovative spark, eye for
+              We`re seeking out a person with the innovative spark, eye for
               example and layout, ardour for images and cappotential to supply
               excessive first-rate layout collaterals end-to-end. Draft mockups
               of internet site designs, brochures, iconography, and every other

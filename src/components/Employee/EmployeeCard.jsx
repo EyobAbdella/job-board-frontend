@@ -1,5 +1,5 @@
 import { Avatar, Rating } from "@mui/material";
-import Profile from "../assets/profile.png";
+import Profile from "../../assets/profile.png";
 import { useState } from "react";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import AddIcon from "@mui/icons-material/Add";
