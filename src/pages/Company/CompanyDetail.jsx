@@ -60,7 +60,7 @@ const CompanyDetail = () => {
               Employer Description:{" "}
             </h1>
             <p className='text-indigo-950'>
-              We're seeking out a person with the innovative spark, eye for
+              Were seeking out a person with the innovative spark, eye for
               example and layout, ardour for images and cappotential to supply
               excessive first-rate layout collaterals end-to-end. Draft mockups
               of internet site designs, brochures, iconography, and every other

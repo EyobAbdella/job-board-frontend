@@ -16,6 +16,11 @@ import EmployeeDashboard from "./pages/Employee/EmployeeDashboard";
 import CompanyDashboard from "./pages/Company/CompanyDashboard";
 import { Toaster } from "react-hot-toast";
 import UserTypeSelection from "./pages/UserTypeSelection";
+import CompanyInfo from "./components/Company/CompanyInfo";
+import ManageJobs from "./components/Company/ManageJobs";
+import PostJob from "./components/Company/PostJob";
+import CompanyProfile from "./components/Company/CompanyProfile";
+import Applicant from "./components/Company/Applicant";
 
 const App = () => {
   return (
@@ -30,17 +35,21 @@ const App = () => {
           <Route path='user-account-type' element={<UserTypeSelection />} />
           <Route path='activate/:uid/:token' element={<Activate />} />
           <Route element={<Layout />}>
-            <Route path='employee/:id' element={<EmployeeProfile />} />
-            <Route
-              path='company-dashboard/:id'
-              element={<CompanyDashboard />}
-            />
-            <Route path='companies' element={<Companies />} />
-            <Route path='company/:id' element={<CompanyDetail />} />
+            <Route path='company-dashboard/*' element={<CompanyDashboard />}>
+              <Route index element={<CompanyInfo />} />
+              <Route path='profile' element={<CompanyProfile />} />
+              <Route path='post-job' element={<PostJob />} />
+              <Route path='manage-jobs' element={<ManageJobs />} />
+              <Route path='job-applicant' element={<Applicant />} />
+            </Route>
+
             <Route
               path='employee-dashboard/:id'
               element={<EmployeeDashboard />}
             />
+            <Route path='employee/:id' element={<EmployeeProfile />} />
+            <Route path='companies' element={<Companies />} />
+            <Route path='company/:id' element={<CompanyDetail />} />
             <Route path='employee' element={<Employee />} />
             <Route path='/jobs/:id' element={<JobDetail />} />
             <Route path='/' element={<Home />} />

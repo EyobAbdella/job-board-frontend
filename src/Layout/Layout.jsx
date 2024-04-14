@@ -1,11 +1,13 @@
 import { Outlet } from "react-router-dom";
-import Header from "../components/Headers";
+import Header, { CompanyHeader, EmployeeHeader } from "../components/Headers";
 import Footer from "../components/Footer";
 
 const Layout = () => {
   return (
     <div className=''>
       <Header />
+      {/* <CompanyHeader /> */}
+      {/* <EmployeeHeader /> */}
       <Outlet />
       <Footer />
     </div>

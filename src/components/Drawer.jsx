@@ -10,14 +10,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 const DrawerComp = () => {
-  const pages = [
-    "Jobs",
-    "Companies",
-    "Employee",
-    "About Us",
-    "Resume Builder",
-    "Reporter Jobs",
-  ];
+  const pages = ["Find Jobs", "Companies", "Reporter Jobs"];
   const url = ["/Jobs", "/Companies", "/Employee"];
   const navigate = useNavigate();
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -33,7 +26,12 @@ const DrawerComp = () => {
         anchor='left'
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}>
-        <List>
+        <List sx={{ width: 220, mt: 1 }}>
+          <div className='flex items-center space-x-2 hover:bg-gray-100 px-2.5 py-1'>
+            <div className='h-11 w-11 rounded-full bg-indigo-400'></div>
+            <p>John Smith</p>
+          </div>
+
           {pages.map((page, index) => (
             <ListItemButton key={index} onClick={() => handlePageClick(index)}>
               <ListItemIcon>
