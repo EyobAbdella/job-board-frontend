@@ -8,7 +8,7 @@ const TestimonialCard = () => {
       <div className='pl-4 absolute top-0'>
         <Avatar alt='John' src={Image} sx={{ width: 95, height: 95 }} />
       </div>
-      <div className='mt-12 bg-slate-100 px-6 rounded-md h-[250px] w-[370px] sm:w-96 flex flex-col justify-center'>
+      <div className='mt-12 bg-slate-200 px-6 rounded-lg h-[250px] w-[370px] sm:w-96 flex flex-col justify-center'>
         <FormatQuoteIcon sx={{ fontSize: 60, color: "#3b82f6", ml: "auto" }} />
         <div className='flex items-center gap-x-4'>
           <h1 className='text-lg font-semibold'>John Smith</h1>

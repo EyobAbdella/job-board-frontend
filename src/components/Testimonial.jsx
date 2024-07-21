@@ -27,12 +27,12 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <div className='text-slate-50 bg-gradient-to-r lfrom-indigo-500 lvia-purple-500 lto-pink-500 bg-indigo-400 py-14 sm:py-28 px-1 flex flex-col items-center h-full w-full'>
+    <div className='text-slate-50 bg-slate-50 py-14 sm:py-5 px-1 flex flex-col items-center h-full w-full'>
       <h1 className='text-4xl mb-2 px-0.5 text-center font-semibold text-zinc-900'>
         Positive Feedback From Satisfied Candidates
       </h1>
-      <p className='text-lg px-0.5 text-center'>
-        What People Are Saying About the Service Provided by JobHunt.
+      <p className='text-lg px-0.5 text-center text-slate-800'>
+        What People Are Saying About the Service Provided by JobFinder.
       </p>
       <div
         id='slider'
@@ -44,12 +44,12 @@ const Testimonial = () => {
       <div className='flex items-center justify-between w-40 mt-5'>
         <div
           onClick={sliderLeft}
-          className='rounded-full cursor-pointer hover:border-blue-300 border border-gray-300'>
+          className='rounded-full cursor-pointer text-slate-600 hover:border-blue-300 border border-gray-300'>
           <ChevronLeftIcon fontSize='large' />
         </div>
         <div
           onClick={sliderRight}
-          className='rounded-full cursor-pointer hover:border-blue-300 border border-gray-300'>
+          className='rounded-full cursor-pointer text-slate-600 hover:border-blue-300 border border-gray-300'>
           <ChevronRightIcon fontSize='large' />
         </div>
       </div>

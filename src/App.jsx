@@ -21,6 +21,8 @@ import ManageJobs from "./components/Company/ManageJobs";
 import PostJob from "./components/Company/PostJob";
 import CompanyProfile from "./components/Company/CompanyProfile";
 import Applicant from "./components/Company/Applicant";
+import EmployeeInfo from "./components/Employee/EmployeeInfo";
+import Profile from "./components/Employee/Profile";
 
 const App = () => {
   return (
@@ -36,17 +38,17 @@ const App = () => {
           <Route path='activate/:uid/:token' element={<Activate />} />
           <Route element={<Layout />}>
             <Route path='company-dashboard/*' element={<CompanyDashboard />}>
-              <Route index element={<CompanyInfo />} />
+              <Route index path='company-name' element={<CompanyInfo />} />
               <Route path='profile' element={<CompanyProfile />} />
               <Route path='post-job' element={<PostJob />} />
               <Route path='manage-jobs' element={<ManageJobs />} />
               <Route path='job-applicant' element={<Applicant />} />
             </Route>
 
-            <Route
-              path='employee-dashboard/:id'
-              element={<EmployeeDashboard />}
-            />
+            <Route path='employee-dashboard/*' element={<EmployeeDashboard />}>
+              <Route index path='employee-name' element={<EmployeeInfo />} />
+              <Route path='profile' element={<Profile />} />
+            </Route>
             <Route path='employee/:id' element={<EmployeeProfile />} />
             <Route path='companies' element={<Companies />} />
             <Route path='company/:id' element={<CompanyDetail />} />

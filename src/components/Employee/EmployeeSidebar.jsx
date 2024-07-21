@@ -6,43 +6,69 @@ import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlin
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const EmployeeSidebar = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log(location.pathname);
+  const path = location.pathname.replace("/employee-dashboard/", "");
+  const items = [
+    {
+      icon: <HomeOutlinedIcon sx={{ fontSize: 25 }} />,
+      label: "Dashboard",
+      url: "employee-name",
+    },
+    {
+      icon: <PersonOutlineOutlinedIcon sx={{ fontSize: 25 }} />,
+      label: "Profile",
+      url: "profile",
+    },
+    {
+      icon: <BorderColorOutlinedIcon sx={{ fontSize: 25 }} />,
+      label: "My Resume",
+      url: "my-resume",
+    },
+    {
+      icon: <BusinessCenterOutlinedIcon sx={{ fontSize: 25 }} />,
+      label: "Applied Jobs",
+      url: "applied-jobs",
+    },
+    {
+      icon: <BookmarkBorderOutlinedIcon sx={{ fontSize: 25 }} />,
+      label: "Short Listed",
+      url: "saved-jobs",
+    },
+    {
+      icon: <NotificationsNoneOutlinedIcon sx={{ fontSize: 25 }} />,
+      label: "Job Alert",
+      url: "job-alert",
+    },
+    {
+      icon: <LockOutlinedIcon sx={{ fontSize: 25 }} />,
+      label: "Change Password",
+      url: "change-password",
+    },
+    {
+      icon: <LogoutOutlinedIcon sx={{ fontSize: 25 }} />,
+      label: "Logout",
+      url: "logout",
+    },
+  ];
   return (
-    <ui className='border-r border-gray-300 px-10 pb-4 pt-8 space-y-3'>
-      <li className='flex items-center gap-x-3 w-30 justify-between px-12 py-3 bg-indigo-100 text-indigo-500 font-[500] rounded-lg'>
-        <HomeOutlinedIcon sx={{ fontSize: 25 }} />
-        <p className='mr-auto'>Dashboard</p>
-      </li>
-      <li className='flex items-center gap-x-3 w-30 justify-between px-12 text-indigo-950 py-3 hover:bg-indigo-100 hover:text-indigo-500 font-[500] rounded-lg'>
-        <PersonOutlineOutlinedIcon sx={{ fontSize: 25 }} />
-        <p className='mr-auto'>Profile</p>
-      </li>
-      <li className='flex items-center gap-x-3 w-30 justify-between px-12 text-indigo-950 py-3 hover:bg-indigo-100 hover:text-indigo-500 font-[500] rounded-lg'>
-        <BorderColorOutlinedIcon sx={{ fontSize: 25 }} />
-        <p className='mr-auto'>My Resume</p>
-      </li>
-      <li className='flex items-center gap-x-3 w-30 justify-between px-12 text-indigo-950 py-3 hover:bg-indigo-100 hover:text-indigo-500 font-[500] rounded-lg'>
-        <BusinessCenterOutlinedIcon sx={{ fontSize: 25 }} />
-        <p className='mr-auto'>Applied Jobs</p>
-      </li>
-      <li className='flex items-center gap-x-3 w-30 justify-between px-12 text-indigo-950 py-3 hover:bg-indigo-100 hover:text-indigo-500 font-[500] rounded-lg'>
-        <BookmarkBorderOutlinedIcon sx={{ fontSize: 25 }} />
-        <p className='mr-auto'>Short Listed</p>
-      </li>
-      <li className='flex items-center gap-x-3 w-30 justify-between px-12 text-indigo-950 py-3 hover:bg-indigo-100 hover:text-indigo-500 font-[500] rounded-lg'>
-        <NotificationsNoneOutlinedIcon sx={{ fontSize: 25 }} />
-        <p className='mr-auto'>Job Alert</p>
-      </li>
-      <li className='flex items-center gap-x-3 w-30 justify-between px-12 text-indigo-950 py-3 hover:bg-indigo-100 hover:text-indigo-500 font-[500] rounded-lg'>
-        <LockOutlinedIcon sx={{ fontSize: 25 }} />
-        <p className='mr-auto'>Change Password</p>
-      </li>
-      <li className='flex items-center gap-x-3 w-30 justify-between px-12 text-indigo-950 py-3 hover:bg-indigo-100 hover:text-indigo-500 font-[500] rounded-lg'>
-        <LogoutOutlinedIcon sx={{ fontSize: 25 }} />
-        <p className='mr-auto'>Logout</p>
-      </li>
-    </ui>
+    <div className='border-r border-gray-300 px-4 pb-4 pt-8 space-y-3'>
+      {items.map((item, index) => (
+        <div
+          key={index}
+          onClick={() => navigate(item.url)}
+          className={`flex items-center gap-x-3 justify-between px-6 py-3 w-52 text-gray-600 hover:bg-indigo-100 hover:text-indigo-500 font-[500] rounded-lg cursor-pointer ${
+            path === item.url ? "bg-indigo-100 text-indigo-500" : ""
+          }`}>
+          {item.icon}
+          <p className='mr-auto min-w-full'>{item.label}</p>
+        </div>
+      ))}
+    </div>
   );
 };
 

@@ -8,11 +8,11 @@ import ContactPageOutlinedIcon from "@mui/icons-material/ContactPageOutlined";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const CompanySidebar = () => {
-  const iconsAndLabels = [
+  const items = [
     {
       icon: <HomeOutlinedIcon sx={{ fontSize: 25 }} />,
       label: "Dashboard",
-      url: "",
+      url: "company-name",
     },
     {
       icon: <PersonOutlineOutlinedIcon sx={{ fontSize: 25 }} />,
@@ -50,15 +50,13 @@ const CompanySidebar = () => {
   const navigate = useNavigate();
   const path = location.pathname.replace("/company-dashboard/", "");
 
-  console.log(path);
-
   return (
     <div className='border-r border-gray-300 px-4 pb-4 pt-8 space-y-3'>
-      {iconsAndLabels.map((item, index) => (
+      {items.map((item, index) => (
         <div
           key={index}
           onClick={() => navigate(item.url)}
-          className={`flex items-center gap-x-3 justify-between px-10 py-3 text-gray-600 hover:bg-indigo-100 hover:text-indigo-500 font-[500] rounded-lg cursor-pointer ${
+          className={`flex items-center gap-x-3 justify-between px-6 py-3 w-52 text-gray-600 hover:bg-indigo-100 hover:text-indigo-500 font-[500] rounded-lg cursor-pointer ${
             path === item.url ? "bg-indigo-100 text-indigo-500" : ""
           }`}>
           {item.icon}
